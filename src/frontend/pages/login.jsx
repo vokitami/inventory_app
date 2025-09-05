@@ -20,7 +20,7 @@ export default function Login() {
       localStorage.setItem('name', name);
 
       alert(message);
-
+    
       // Redirigir según rol
       if(roleName === 'admin'){
         navigate('/admin-dashboard');
