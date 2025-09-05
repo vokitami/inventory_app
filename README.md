@@ -1,12 +1,55 @@
-# React + Vite
+# Inventory Management System (with Role-Based Authentication)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project is an **inventory management system** built with **React, Node.js, Express, and MySQL**.  
+The goal is to allow users to manage inventories and items with different levels of access based on their roles.  
 
-Currently, two official plugins are available:
+## Current Progress
+At this stage, the following features have been implemented:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Database setup with Sequelize**  
+  - Users  
+  - Inventories  
+  - Custom fields  
+  - Items  
+  - Roles and permissions (RBAC)  
 
-## Expanding the ESLint configuration
+- **Authentication system**  
+  - User registration and login  
+  - JWT-based authentication  
+  - Roles assigned to each user (guest, user, admin)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Authorization system**  
+  - Role-based access control (RBAC)  
+  - Protected routes depending on role  
+  - Example permissions:  
+    - Guest → view and search inventories  
+    - User → create inventory, edit own inventory, comment/like  
+    - Admin → full access, manage users and inventories  
+
+- **Frontend integration (React)**  
+  - Login and register forms connected to the backend  
+  - Protected routes for role-based access  
+  - Token and user info stored in `localStorage`  
+
+## Next Steps
+The features still in progress or pending are:
+
+- Implementing **inventory management** (CRUD for inventories)  
+- Implementing **items management** (CRUD for items inside an inventory)  
+- Admin panel:  
+  - Manage users  
+  - View all inventories  
+  - Assign roles and permissions  
+
+## Tech Stack
+- **Frontend**: React, React Router  
+- **Backend**: Node.js, Express, Sequelize  
+- **Database**: MySQL  
+- **Authentication**: JWT (JSON Web Token)  
+
+## Status
+This project is **work in progress**.  
+Even though it’s not finished yet, it already demonstrates a solid foundation for **role-based authentication and authorization**.
+
+---
